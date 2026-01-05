@@ -1,0 +1,136 @@
+:root {
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-7: 56px;
+  --space-8: 64px;
+  --fz-14: 14px;
+  --fz-16: 16px;
+  --fz-18: 18px;
+  --fz-20: 20px;
+  --fz-28: 28px;
+  --fz-42: 42px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2) var(--space-5) var(--space-2);
+}
+
+.header__left-side {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.logo img {
+  height: 34px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  height: 42px;
+  border: 1px solid #d9d9d9;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.search__field {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 var(--space-1);
+  gap: var(--space-1);
+}
+
+.search__field input {
+  border: none;
+  outline: none;
+  font-size: var(--fz-16);
+}
+
+.search__field--event {
+  min-width: 300px;
+}
+
+.search__field--location {
+  padding: 0 var(--space-2);
+  min-width: 250px;
+}
+
+.search__divider {
+  width: 1px;
+  height: 100%;
+  background: #e5e5e5;
+}
+
+.search__submit {
+  height: 100%;
+  width: 48px;
+  border: none;
+  background: #f65858;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.search__submit img {
+  color: #fff;
+}
+
+.header__right-side {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--fz-14);
+  font-weight: 600;
+}
+
+.choose-language-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.globe-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  padding: 6px var(--space-2);
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.login-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.login-btn:hover {
+  background-color: #dff9f9;
+}
+
+.signup-btn {
+  background-color: #02798a;
+  color: #fff;
+  border: none;
+}
+
+.signup-btn:hover {
+  background-color: #025865;
+}
