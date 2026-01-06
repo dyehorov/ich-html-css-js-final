@@ -132,7 +132,7 @@ function createEventCard(event) {
             </div>
             <div class="event-card__content">
               <h3 class="event-card__title">${title}</h3>
-              <p class="event-card__category">${checkIfTheEventOnline(
+              <p class="event-card__category">${getEventCategory(
                 isOnline,
                 category,
                 distanceKm
@@ -163,7 +163,7 @@ function createEventCard(event) {
   return li
 }
 
-function checkIfTheEventOnline(isOnline, category, distanceKm) {
+function getEventCategory(isOnline, category, distanceKm) {
   if (!isOnline) {
     return `${category} <span>(${distanceKm} km)</span>`
   }
