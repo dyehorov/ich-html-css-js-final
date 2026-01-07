@@ -1,7 +1,15 @@
-const eventsListContainer = document.querySelector(".events-list-container")
+const eventsListContainer = document.querySelector(".events-near-container")
+const upcomingEventsListContainer = document.querySelector(
+  ".upcoming-events-container"
+)
+const topCategoriesListContainer = document.querySelector(
+  ".top-categories-list"
+)
 
 window.addEventListener("DOMContentLoaded", () => {
   renderEventCards()
+  renderUpcomingEventCards()
+  renderTopCategoriesCards()
 })
 
 const events = [
@@ -104,6 +112,100 @@ const events = [
   },
 ]
 
+const upcomingEvents = [
+  {
+    id: 1,
+    title: "Amazing On-Demand 15 Min Interviews with Top Coaches and Speakers",
+    category: "Business",
+    distanceKm: 25,
+    date: "THU, MAR 14",
+    time: "6:00 PM PDT",
+    going: 3,
+    price: "Free",
+    isOnline: true,
+    image: "./assets/images/upcoming-events/upcoming-event-1.jpg",
+  },
+  {
+    id: 2,
+    title: "Vision Pro Developers Online Meetup",
+    category: "Technology",
+    distanceKm: null,
+    date: "WED, MAR 13",
+    time: "7:00 PM PDT",
+    going: 51,
+    price: "Free",
+    isOnline: true,
+    image: "./assets/images/upcoming-events/upcoming-event-2.jpg",
+  },
+  {
+    id: 3,
+    title: "Significant Musical Moments",
+    category: "Hobbies and Passions",
+    distanceKm: 10,
+    date: "WED, MAR 13",
+    time: "6:00 PM PDT",
+    going: 16,
+    price: "Free",
+    isOnline: true,
+    image: "./assets/images/upcoming-events/upcoming-event-3.jpg",
+  },
+  {
+    id: 4,
+    title: "FREE Webinar: Introduction to Power BI",
+    category: "Technology",
+    distanceKm: 33,
+    date: "THU, MAR 14",
+    time: "5:30 PM PDT",
+    going: 33,
+    price: "Free",
+    isOnline: true,
+    image: "./assets/images/upcoming-events/upcoming-event-4.jpg",
+  },
+]
+
+const topCategories = [
+  {
+    id: 1,
+    title: "Travel and Outdoor",
+    image: "./assets/icons/categories/travel_and_outdoor.svg",
+  },
+  {
+    id: 2,
+    title: "Social Activities",
+    image: "./assets/icons/categories/social_activities.svg",
+  },
+  {
+    id: 3,
+    title: "Hobbies and Passions",
+    image: "./assets/icons/categories/hobbies_and_passions.svg",
+  },
+  {
+    id: 4,
+    title: "Sports and Fitness",
+    image: "./assets/icons/categories/sports_and_fitness.svg",
+  },
+  {
+    id: 5,
+    title: "Health and Wellbeing",
+    image: "./assets/icons/categories/health_and_wellness.svg",
+  },
+  {
+    id: 6,
+    title: "Technology",
+    image: "./assets/icons/categories/technology.svg",
+  },
+  {
+    id: 7,
+    title: "Art and Culture",
+    image: "./assets/icons/categories/art_and_culture.svg",
+  },
+  {
+    id: 8,
+    title: "Games",
+    image: "./assets/icons/categories/games.svg",
+  },
+]
+
 function createEventCard(event) {
   const {
     title,
@@ -163,6 +265,22 @@ function createEventCard(event) {
   return li
 }
 
+function createTopCategoriesCard(category) {
+  const li = document.createElement("li")
+  li.classList.add("category-card")
+
+  li.innerHTML = `<div class="category-card-inner">
+                      <div class="category-card-content">
+                          <div class="category-card-image">
+                            <img src="${category.image}" alt="${category.title}">
+                          </div>
+                          <p class="category-title">${category.title}</p>
+                      </div>
+  </div>`
+
+  return li
+}
+
 function getEventCategory(isOnline, category, distanceKm) {
   if (!isOnline) {
     return `${category} <span>(${distanceKm} km)</span>`
@@ -174,5 +292,17 @@ function getEventCategory(isOnline, category, distanceKm) {
 function renderEventCards() {
   events.forEach(event => {
     eventsListContainer.appendChild(createEventCard(event))
+  })
+}
+
+function renderUpcomingEventCards() {
+  upcomingEvents.forEach(event => {
+    upcomingEventsListContainer.appendChild(createEventCard(event))
+  })
+}
+
+function renderTopCategoriesCards() {
+  topCategories.forEach(category => {
+    topCategoriesListContainer.appendChild(createTopCategoriesCard(category))
   })
 }
