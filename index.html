@@ -78,9 +78,7 @@
             /></a>
           </div>
           <div class="all-events-link-wrapper">
-            <a href="./pages/events.html" class="all-events-link"
-              >See all events</a
-            >
+            <a href="./pages/events.html" class="links">See all events</a>
           </div>
         </header>
         <ul class="events-list-container events-near-container"></ul>
@@ -89,9 +87,7 @@
         <header class="events-header">
           <h2 class="section-title">Upcoming online events</h2>
           <div class="all-events-link-wrapper">
-            <a href="./pages/events.html" class="all-events-link"
-              >See all events</a
-            >
+            <a href="./pages/events.html" class="links">See all events</a>
           </div>
         </header>
         <ul class="events-list-container upcoming-events-container"></ul>
@@ -116,49 +112,267 @@
         </div>
       </section>
       <section id="top-categories" class="container">
-        <h2 class="section-title top-categorie-title">
+        <h2 class="section-title section-margin-bottom">
           Explore top categories
         </h2>
         <ul class="top-categories-list"></ul>
       </section>
       <section id="popular-cities" class="container">
-        <h2 class="section-title popular-cities-title">Popular cities on Meetup</h2>
-        <p class="popular-cities-text">
-          Looking for fun things to do near you? See what Meetup organizers are planning in cities around the country.
+        <h2 class="section-title section-margin-bottom">
+          Popular cities on Meetup
+        </h2>
+        <p class="section-text-under-title">
+          Looking for fun things to do near you? See what Meetup organizers are
+          planning in cities around the country.
         </p>
-        <ul class="popular-cities-list">
+        <ul class="popular-cities-list" data-city="New York">
           <li class="popular-cities-card">
-            <a href="#">
-              <img src="./assets/images/popular-cities/new_york.png" alt="New York">
+            <a href="./pages/events.html">
+              <img
+                src="./assets/images/popular-cities/new_york.png"
+                alt="New York"
+              />
               <span>New York</span>
             </a>
           </li>
-          <li class="popular-cities-card">
-            <a href="#">
-              <img src="./assets/images/popular-cities/san_francisco.png" alt="San Francisco">
+          <li class="popular-cities-card" data-city="San Francisco">
+            <a href="./pages/events.html">
+              <img
+                src="./assets/images/popular-cities/san_francisco.png"
+                alt="San Francisco"
+              />
               <span>San Francisco</span>
             </a>
-          </li>    
-          <li class="popular-cities-card">
-            <a href="#">
-              <img src="./assets/images/popular-cities/chicago.png" alt="Chicago">
+          </li>
+          <li class="popular-cities-card" data-city="Chicago">
+            <a href="./pages/events.html">
+              <img
+                src="./assets/images/popular-cities/chicago.png"
+                alt="Chicago"
+              />
               <span>Chicago</span>
             </a>
-          </li>      
-          <li class="popular-cities-card">
-            <a href="#">
-              <img src="./assets/images/popular-cities/nashville.png" alt="Nashville">
+          </li>
+          <li class="popular-cities-card" data-city="Nashville">
+            <a href="./pages/events.html">
+              <img
+                src="./assets/images/popular-cities/nashville.png"
+                alt="Nashville"
+              />
               <span>Nashville</span>
             </a>
           </li>
-          <li class="popular-cities-card">
-            <a href="#">
-              <img src="./assets/images/popular-cities/miami.png" alt="Miami">
+          <li class="popular-cities-card" data-city="Miami">
+            <a href="./pages/events.html">
+              <img src="./assets/images/popular-cities/miami.png" alt="Miami" />
               <span>Miami</span>
             </a>
           </li>
         </ul>
       </section>
+      <section id="how-meetup-works" class="container">
+        <h2 class="section-title section-margin-bottom">How Meetup works</h2>
+        <div class="how-meetup-works-list">
+          <div class="how-meetup-item discover">
+            <div class="how-meetup-icon discover-icon">
+              <img src="./assets/icons/discover-events-icon.svg" alt="" />
+            </div>
+            <div class="how-item-content">
+              <h3 class="how-meetup-works-list-item-title">
+                Discover events and groups
+              </h3>
+              <p class="how-meetup-works-list-item-text">
+                See who's hosting local events for all the things you love
+              </p>
+              <a href="./pages/events.html" class="how-item-link links"
+                >Search events and groups</a
+              >
+            </div>
+          </div>
+          <div class="how-meetup-item start-group">
+            <div class="how-meetup-icon start-group-icon">
+              <img src="./assets/icons/start-group-icon.svg" alt="" />
+            </div>
+            <div class="how-item-content">
+              <h3 class="how-meetup-works-list-item-title">
+                Start a group to host events
+              </h3>
+              <p class="how-meetup-works-list-item-text">
+                Create your own Meetup group, and draw from a community of
+                millions
+              </p>
+              <a href="./pages/events.html" class="how-item-link links"
+                >Start a group</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="meetup-friendship" class="container">
+        <h2 class="section-title section-margin-bottom">
+          Friendships are made on Meetup
+        </h2>
+        <p class="section-text-under-title">
+          Since 2002, members have used Meetup to make new friends, meet
+          like-minded people, spend time on hobbies, and connect with locals
+          over shared interests. Learn how.
+        </p>
+        <div class="friendship-list">
+          <article class="friendship-list-item">
+            <img
+              src="./assets/images/friendships-meetup/first_article.jpg"
+              alt="Brunch with friends"
+              class="friendship-list-item-image"
+            />
+            <h3 class="friendship-list-item-title">
+              I Used Meetup to Make Friends at Brunch
+            </h3>
+            <p class="friendship-list-item-text">
+              New Jersey-based writer and college student Brianna Stryker wanted
+              to meet friends in her hometown. Learn how she used Meetup to make
+              connections by joining a Girls Night Out Meetup group.
+            </p>
+            <a
+              href="./pages/events.html"
+              class="friendship-list-item-link links"
+              >Read more</a
+            >
+          </article>
+          <article class="friendship-list-item">
+            <img
+              src="./assets/images/friendships-meetup/second_article.jpg"
+              alt="Friends sitting on a hill"
+              class="friendship-list-item-image"
+            />
+            <h3 class="friendship-list-item-title">
+              How to Turn Casual Connections into Close Friendships
+            </h3>
+            <p class="friendship-list-item-text">
+              It’s proven that close friendships are harder to make as an adult.
+              But don’t sweat it: here’s what you can do to simplify the
+              process.
+            </p>
+            <a
+              href="./pages/events.html"
+              class="friendship-list-item-link links"
+              >Read more</a
+            >
+          </article>
+          <article class="friendship-list-item">
+            <img
+              src="./assets/images/friendships-meetup/third_article.jpg"
+              alt="Friends talking in a cafe"
+              class="friendship-list-item-image"
+            />
+            <h3 class="friendship-list-item-title">
+              Do You Have the “Right” Number of Friends?
+            </h3>
+            <p class="friendship-list-item-text">
+              Studies from around the world have tried to help people answer
+              this question. Learn about the three tiers of friendship and how
+              to fulfill them.
+            </p>
+            <a
+              href="./pages/events.html"
+              class="friendship-list-item-link links"
+              >Read more</a
+            >
+          </article>
+        </div>
+      </section>
+      <footer id="footer">
+        <div class="container footer-inner">
+          <div class="footer-title">
+            <h2>Create your own Meetup group.</h2>
+            <a href="#" class="footer-title-btn">Get Started</a>
+          </div>
+          <hr class="footer-divider" />
+          <div class="footer-content">
+            <div class="footer-column">
+              <h4 class="footer-title">Your Account</h4>
+              <a href="#">Sign up</a>
+              <a href="#">Log in</a>
+              <a href="#">Help</a>
+              <a href="#">Become an Affiliate</a>
+            </div>
+            <div class="footer-column">
+              <h4 class="footer-title">Discover</h4>
+              <a href="#">Groups</a>
+              <a href="#">Calendar</a>
+              <a href="#">Topics</a>
+              <a href="#">Cities</a>
+              <a href="#">Online Events</a>
+              <a href="#">Local Guides</a>
+              <a href="#">Make Friends</a>
+            </div>
+            <div class="footer-column">
+              <h4 class="footer-title">Meetup</h4>
+              <a href="#">About</a>
+              <a href="#">Blog</a>
+              <a href="#">Meetup Pro</a>
+              <a href="#">Careers</a>
+              <a href="#">Apps</a>
+              <a href="#">Podcast</a>
+            </div>
+            <div class="footer-column footer-apps">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.meetup&hl=en-US&pli=1"
+                target="_blank"
+              >
+                <img
+                  src="./assets/icons/footer-icons/google-play.svg"
+                  alt="Google Play"
+                />
+              </a>
+              <a
+                href="https://apps.apple.com/us/app/meetup-social-events-groups/id375990038"
+                target="_blank"
+              >
+                <img
+                  src="./assets/icons/footer-icons/app-store.svg"
+                  alt="App Store"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="footer-socials">
+              <span>Follow us</span>
+              <a href="https://www.facebook.com/meetup/" target="_blank"
+                ><img
+                  src="./assets/icons/footer-icons/facebook.svg"
+                  alt="Facebook"
+              /></a>
+              <a href="https://x.com/Meetup/" target="_blank"
+                ><img
+                  src="./assets/icons/footer-icons/twitter.svg"
+                  alt="Twitter"
+              /></a>
+              <a href="https://www.youtube.com/meetup" target="_blank"
+                ><img
+                  src="./assets/icons/footer-icons/youtube.svg"
+                  alt="YouTube"
+              /></a>
+              <a href="https://www.instagram.com/meetup/" target="_blank"
+                ><img
+                  src="./assets/icons/footer-icons/instagram.svg"
+                  alt="Instagram"
+              /></a>
+              <a href="https://www.tiktok.com/@meetup" target="_blank"
+                ><img src="./assets/icons/footer-icons/tiktok.svg" alt="TikTok"
+              /></a>
+            </div>
+            <div class="footer-legal">
+              <span>&copy; 2024 Meetup</span>
+              <a href="#">Terms of Service</a>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Do Not Sell or Share My Personal Data</a>
+              <a href="#">Cookie Policy</a>
+              <a href="#">Help</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
     <div class="privacy-modal">
       <div class="privacy-modal-content">
@@ -182,14 +396,18 @@
           Use precise geolocation data. Actively scan device characteristics for
           identification. Store and/or access information on a device.
           Personalised ads and content, ad and content measurement, audience
-          insights and product development. </br>
+          insights and product development. <br />
           <a href="#" class="privacy-modal-link"
             >List of IAB framework participants</a
           >
         </p>
         <div class="privacy-modal-action-handlers">
-          <button class="button privacy-modal-button privacy-reject">Reject</button>
-          <button class="button privacy-modal-button privacy-accept">Accept</button>
+          <button class="button privacy-modal-button privacy-reject">
+            Reject
+          </button>
+          <button class="button privacy-modal-button privacy-accept">
+            Accept
+          </button>
         </div>
       </div>
     </div>

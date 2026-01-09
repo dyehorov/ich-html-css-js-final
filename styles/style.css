@@ -25,6 +25,14 @@ body {
   padding: 0 24px;
 }
 
+.container:last-child {
+  margin-bottom: 0;
+}
+
+.section-margin-bottom {
+  margin-bottom: var(--space-3);
+}
+
 #header {
   display: flex;
   justify-content: space-between;
@@ -219,7 +227,7 @@ body {
   margin-left: auto;
 }
 
-.all-events-link {
+.links {
   font-size: var(--fz-14);
   text-decoration: none;
   color: #00798a;
@@ -227,11 +235,11 @@ body {
   line-height: 24px;
 }
 
-.all-events-link:hover {
+.links:hover {
   text-decoration: underline;
 }
 
-.all-events-link:visited {
+.links:visited {
   color: #00798a;
   text-decoration: none;
 }
@@ -379,10 +387,6 @@ body {
   line-height: 24px;
 }
 
-.top-categorie-title {
-  margin-bottom: var(--space-3);
-}
-
 .popular-cities-list {
   list-style: none;
   display: flex;
@@ -391,12 +395,10 @@ body {
   justify-content: space-between;
 }
 
-.popular-cities-title {
-  margin-bottom: var(--space-2);
-}
-
-.popular-cities-text {
+.section-text-under-title {
   margin-bottom: var(--space-3);
+  color: #707070;
+  max-width: 800px;
 }
 
 .popular-cities-card {
@@ -469,6 +471,173 @@ body {
   text-decoration: underline;
 }
 
+.how-meetup-works-list {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.how-meetup-item {
+  display: flex;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-4) var(--space-3);
+  background-color: rgba(151, 202, 209, 0.08);
+  border-radius: 12px;
+}
+
+.how-item-content > h3,
+.how-item-content > p {
+  margin-bottom: var(--space-3);
+}
+
+.how-item-content > p {
+  max-width: 370px;
+}
+
+.friendship-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.friendship-list-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.friendship-list-item-image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.friendship-list-item-title {
+  margin: var(--space-2) 0;
+  max-width: 320px;
+}
+
+.friendship-list-item-text {
+  font-size: var(--fz-14);
+  line-height: 24px;
+  color: #707070;
+  margin-bottom: var(--space-2);
+}
+
+.friendship-list-item-link {
+  margin-top: auto;
+}
+
+#footer {
+  background-color: #212121;
+  color: #f6f7f8;
+  padding: var(--space-4) 0;
+}
+
+#footer a {
+  color: #bdbdbd;
+  text-decoration: none;
+  font-size: var(--fz-14);
+}
+
+#footer a:hover {
+  color: #fff;
+}
+
+.footer-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  font-weight: 800;
+  font-size: var(--fz-16);
+}
+
+.footer-title-btn {
+  border: 2px solid #fff;
+  padding: var(--space-1) var(--space-2);
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid #3a3a3a;
+  margin-bottom: 40px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.footer-title {
+  margin-bottom: var(--space-1);
+  font-size: var(--fz-16);
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.footer-column > a {
+  max-width: 125px;
+}
+
+.footer-apps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.footer-apps img {
+  width: 140px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  font-size: var(--fz-14);
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.footer-socials > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  border-radius: 50%;
+}
+
+.footer-socials > a > img {
+  width: 25px;
+  height: 25px;
+}
+
+.footer-socials > a:hover {
+  background-color: rgba(151, 150, 150, 0.3);
+}
+
+.footer-legal {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
 @media (max-width: 1160px) {
   .top-categories-list {
     justify-content: center;
@@ -478,6 +647,10 @@ body {
 
   .popular-cities-list {
     justify-content: center;
+  }
+
+  .friendship-list {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -528,10 +701,6 @@ body {
     display: none;
   }
 
-  .section-title {
-    font-size: var(--fz-28);
-  }
-
   .events-location-link {
     font-size: var(--fz-14);
   }
@@ -549,6 +718,7 @@ body {
   .join-meet-up-title {
     position: absolute;
     top: var(--space-1);
+    left: var(--space-2);
   }
 
   .join-meetup-text {
@@ -560,12 +730,21 @@ body {
     align-self: center;
   }
 
-  .join-meet-up-title {
-    left: var(--space-2);
-  }
-
   .privacy-modal {
     right: 1rem;
+  }
+
+  .how-meetup-works-list {
+    flex-direction: column;
+  }
+
+  .how-meetup-item {
+    gap: var(--space-2) a;
+    padding: var(--space-3) var(--space-2);
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -639,9 +818,35 @@ body {
   .popular-cities-card {
     flex: 0 0 150px;
   }
+
+  .friendship-list {
+    grid-template-columns: 1fr;
+  }
+
+  .friendship-list-item-image {
+    height: 200px;
+  }
+
+  .friendship-list-item-title {
+    font-size: var(--fz-16);
+  }
+
+  .footer-title {
+    flex-direction: column;
+    gap: var(--space-2);
+    align-items: flex-start;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 480px) {
+  .section-margin-bottom {
+    margin-bottom: var(--space-2);
+  }
+
   .event-card {
     min-height: 0;
   }
@@ -699,6 +904,10 @@ body {
     gap: var(--space-2);
   }
 
+  .join-meet-up-title {
+    font-size: var(--fz-20);
+  }
+
   .join-meetup-image img {
     max-width: 238px;
   }
@@ -719,8 +928,19 @@ body {
     font-size: var(--fz-14);
   }
 
-  .popular-cities-text {
+  .section-text-under-title {
     font-size: var(--fz-14);
+  }
+
+  .how-item-content > p,
+  .how-item-content > a {
+    font-size: var(--fz-14);
+  }
+
+  .footer-legal {
+    gap: var(--space-1);
+    justify-content: center;
+    align-items: center;
   }
 }
 
