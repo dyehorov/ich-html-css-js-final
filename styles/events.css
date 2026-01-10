@@ -104,6 +104,7 @@
 
 .events-map {
   width: 360px;
+  position: relative;
 }
 
 .map {
@@ -121,7 +122,19 @@
 }
 
 .map-button {
-  width: 100%;
+  position: absolute;
+  max-width: 170px;
+  left: 175px;
+  transform: translateX(-50%);
+  top: 190px;
+  padding: var(--space-1) var(--space-2);
+  border: 3px solid #00798a;
+  border-radius: 12px;
+  color: #00798a;
+  font-weight: 600;
+  display: flex;
+  gap: var(--space-1);
+  cursor: pointer;
 }
 
 .filter-no-results {
