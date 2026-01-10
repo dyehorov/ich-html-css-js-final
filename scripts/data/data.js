@@ -1,3 +1,7 @@
+const assetBase = window.location.pathname.includes("/pages/")
+  ? "../assets"
+  : "./assets"
+
 export const events = [
   {
     id: 1,
@@ -9,7 +13,7 @@ export const events = [
     attendees: 1,
     price: "Free",
     type: "offline",
-    image: "/assets/images/events/event-1.jpg",
+    image: `${assetBase}/images/events/event-1.jpg`,
   },
   {
     id: 2,
@@ -21,7 +25,7 @@ export const events = [
     attendees: 41,
     price: "Free",
     type: "offline",
-    image: "/assets/images/events/event-2.jpg",
+    image: `${assetBase}/images/events/event-2.jpg`,
   },
   {
     id: 3,
@@ -34,7 +38,7 @@ export const events = [
     attendees: 40,
     price: "Free",
     type: "online",
-    image: "/assets/images/events/event-3.jpg",
+    image: `${assetBase}/images/events/event-3.jpg`,
   },
   {
     id: 4,
@@ -46,7 +50,7 @@ export const events = [
     attendees: 41,
     price: "Free",
     type: "offline",
-    image: "/assets/images/events/event-4.jpg",
+    image: `${assetBase}/images/events/event-4.jpg`,
   },
   {
     id: 5,
@@ -58,7 +62,7 @@ export const events = [
     attendees: 29,
     price: "Free",
     type: "offline",
-    image: "/assets/images/events/event-5.jpg",
+    image: `${assetBase}/images/events/event-5.jpg`,
   },
   {
     id: 6,
@@ -70,7 +74,7 @@ export const events = [
     attendees: 51,
     price: "Free",
     type: "online",
-    image: "/assets/images/events/event-6.jpg",
+    image: `${assetBase}/images/events/event-6.jpg`,
   },
   {
     id: 7,
@@ -82,7 +86,7 @@ export const events = [
     attendees: 11,
     price: "Free",
     type: "offline",
-    image: "/assets/images/events/event-7.jpg",
+    image: `${assetBase}/images/events/event-7.jpg`,
   },
   {
     id: 8,
@@ -94,7 +98,7 @@ export const events = [
     attendees: 16,
     price: "Free",
     type: "offline",
-    image: "/assets/images/events/event-8.jpg",
+    image: `${assetBase}/images/events/event-8.jpg`,
   },
 ]
 
@@ -109,7 +113,7 @@ export const upcomingEvents = [
     attendees: 3,
     price: "Free",
     type: "online",
-    image: "/assets/images/upcoming-events/upcoming-event-1.jpg",
+    image: `${assetBase}/images/upcoming-events/upcoming-event-1.jpg`,
   },
   {
     id: 2,
@@ -121,7 +125,7 @@ export const upcomingEvents = [
     attendees: 51,
     price: "Free",
     type: "online",
-    image: "/assets/images/upcoming-events/upcoming-event-2.jpg",
+    image: `${assetBase}/images/upcoming-events/upcoming-event-2.jpg`,
   },
   {
     id: 3,
@@ -133,7 +137,7 @@ export const upcomingEvents = [
     attendees: 16,
     price: "Free",
     type: "online",
-    image: "/assets/images/upcoming-events/upcoming-event-3.jpg",
+    image: `${assetBase}/images/upcoming-events/upcoming-event-3.jpg`,
   },
   {
     id: 4,
@@ -145,7 +149,7 @@ export const upcomingEvents = [
     attendees: 33,
     price: "Free",
     type: "online",
-    image: "/assets/images/upcoming-events/upcoming-event-4.jpg",
+    image: `${assetBase}/images/upcoming-events/upcoming-event-4.jpg`,
   },
 ]
 
@@ -153,42 +157,42 @@ export const topCategories = [
   {
     id: 1,
     title: "Travel and Outdoor",
-    image: "/assets/icons/categories/travel_and_outdoor.svg",
+    image: `${assetBase}/icons/categories/travel_and_outdoor.svg`,
   },
   {
     id: 2,
     title: "Social Activities",
-    image: "/assets/icons/categories/social_activities.svg",
+    image: `${assetBase}/icons/categories/social_activities.svg`,
   },
   {
     id: 3,
     title: "Hobbies and Passions",
-    image: "/assets/icons/categories/hobbies_and_passions.svg",
+    image: `${assetBase}/icons/categories/hobbies_and_passions.svg`,
   },
   {
     id: 4,
     title: "Sports and Fitness",
-    image: "/assets/icons/categories/sports_and_fitness.svg",
+    image: `${assetBase}/icons/categories/sports_and_fitness.svg`,
   },
   {
     id: 5,
     title: "Health and Wellbeing",
-    image: "/assets/icons/categories/health_and_wellness.svg",
+    image: `${assetBase}/icons/categories/health_and_wellness.svg`,
   },
   {
     id: 6,
     title: "Technology",
-    image: "/assets/icons/categories/technology.svg",
+    image: `${assetBase}/icons/categories/technology.svg`,
   },
   {
     id: 7,
     title: "Art and Culture",
-    image: "/assets/icons/categories/art_and_culture.svg",
+    image: `${assetBase}/icons/categories/art_and_culture.svg`,
   },
   {
     id: 8,
     title: "Games",
-    image: "/assets/icons/categories/games.svg",
+    image: `${assetBase}/icons/categories/games.svg`,
   },
 ]
 

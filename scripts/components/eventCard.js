@@ -1,4 +1,7 @@
 export function createEventCard(event) {
+  const assetBase = window.location.pathname.includes("/pages/")
+    ? "../assets"
+    : "./assets"
   const {
     title,
     category,
@@ -33,19 +36,25 @@ export function createEventCard(event) {
                 )}</p>
                 <div class="event-card__meta">
                   <div class="event-card__date">
-                    <img src="/assets/icons/calendar.svg" alt="Calendar icon" />
+                    <img
+                      src="${assetBase}/icons/calendar.svg"
+                      alt="Calendar icon"
+                    />
                     <span>${formatDate(date, time)}</span>
                   </div>
                   <div class="event-card__footer">
                     <div class="event-card__going">
                       <img
-                        src="/assets/icons/checkmark.svg"
+                        src="${assetBase}/icons/checkmark.svg"
                         alt="Checkmark icon"
                       />
                       <span>${attendees} going</span>
                     </div>
                     <div class="event-card__price">
-                      <img src="/assets/icons/ticket.svg" alt="Ticket icon" />
+                      <img
+                        src="${assetBase}/icons/ticket.svg"
+                        alt="Ticket icon"
+                      />
                       <span>${price}</span>
                     </div>
                   </div>
