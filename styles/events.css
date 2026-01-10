@@ -82,6 +82,7 @@
 
 .events-list-container {
   display: flex;
+  width: 100%;
   max-width: 600px;
   flex-direction: column;
   gap: var(--space-1);
@@ -233,8 +234,8 @@
     width: 100%;
   }
 
-  .events-list-container {
-    max-width: 100%;
+  .container {
+    margin: 0;
   }
 }
 
