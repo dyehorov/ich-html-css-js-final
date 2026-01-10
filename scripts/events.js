@@ -1,68 +1,59 @@
+import { filters, eventsStore } from "./data/data.js"
+import { createFilterOptions } from "./components/filterOptions.js"
+import { createEventCard } from "./components/eventCard.js"
+import { renderFilterOptions, renderEventCards } from "./render/render.js"
+import { initPrivacyModal } from "./ui/privacyModal.js"
+import {
+  filterByDate,
+  filterByType,
+  filterByDistance,
+  filterByCategory,
+} from "./filter/filter.js"
+
 const filtersForm = document.querySelector(".filters")
+const eventsListContainer = document.querySelector(".events-list-container")
+const resetFiltersBtn = document.querySelector(".reset-filters-btn")
+const filterNoResultsContainer = document.querySelector(".filter-no-results")
+const resetFiltersInput = document.querySelector(".reset-filter-input")
 
-const filters = [
-  {
-    type: "day",
-    options: [
-      "Any date",
-      new Date(2024, 2, 13, 11),
-      new Date(2024, 2, 14, 11),
-      new Date(2024, 2, 14, 20),
-      new Date(2024, 2, 16, 14),
-      new Date(2024, 2, 16, 14),
-      new Date(2024, 2, 23, 11, 30),
-      new Date(2024, 2, 23, 14),
-      new Date(2024, 2, 28, 20),
-      new Date(2024, 2, 30, 14),
-      new Date(2024, 3, 11, 20),
-      new Date(2024, 3, 25, 20),
-    ],
-  },
-  { type: "type", options: ["Any type", "offline", "online"] },
-  { type: "distance", options: ["Any distance", 25, 50, 75, 100] },
-  {
-    type: "category",
-    options: [
-      "Any category",
-      "Health and Wellbeing",
-      "Social Activities",
-      "Business",
-      "Technology",
-    ],
-  },
-]
+initPrivacyModal()
+renderFilterOptions(filters, filtersForm, createFilterOptions)
+renderEventCards(eventsStore, eventsListContainer, createEventCard)
 
-function createFilterOptions(type, options) {
-  const select = document.createElement("select")
-  select.name = type
-  select.id = type
+filtersForm.addEventListener("change", () => {
+  const day = document.querySelector("#day").value
+  const type = document.querySelector("#type").value
+  const distance = document.querySelector("#distance").value
+  const category = document.querySelector("#category").value
 
-  options.forEach(option => {
-    const optionElement = document.createElement("option")
-    if (option instanceof Date) {
-      optionElement.value = option.getTime() // number
-      optionElement.textContent = option.toLocaleString("en-US", {
-        year: "numeric",
-        month: "short",
-        day: "numeric",
-        hour: "2-digit",
-        minute: "2-digit",
-      })
-    } else {
-      optionElement.value = option
-      optionElement.textContent = option
-    }
+  resetFiltersInput.classList.remove("hidden")
 
-    select.appendChild(optionElement)
-  })
+  let filtered = [...eventsStore]
 
-  return select
-}
+  filtered = filterByDate(filtered, day)
+  filtered = filterByType(filtered, type)
+  filtered = filterByDistance(filtered, distance)
+  filtered = filterByCategory(filtered, category)
 
-function renderFilterOptions(filters) {
-  filters.forEach(({ type, options }) => {
-    filtersForm.appendChild(createFilterOptions(type, options))
-  })
-}
+  eventsListContainer.innerHTML = ""
 
-renderFilterOptions(filters)
+  if (filtered.length === 0) {
+    filterNoResultsContainer.classList.remove("hidden")
+
+    return
+  }
+
+  filterNoResultsContainer.classList.add("hidden")
+  renderEventCards(filtered, eventsListContainer, createEventCard)
+})
+
+resetFiltersBtn.addEventListener("click", () => {
+  filtersForm.reset()
+})
+
+filtersForm.addEventListener("reset", () => {
+  resetFiltersInput.classList.add("hidden")
+  filterNoResultsContainer.classList.add("hidden")
+
+  renderEventCards(eventsStore, eventsListContainer, createEventCard)
+})
