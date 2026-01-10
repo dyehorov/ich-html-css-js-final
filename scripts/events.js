@@ -9,14 +9,18 @@ import {
   filterByDistance,
   filterByCategory,
 } from "./filter/filter.js"
+import { initMap } from "./ui/map.js"
 
 const filtersForm = document.querySelector(".filters")
 const eventsListContainer = document.querySelector(".events-list-container")
 const resetFiltersBtn = document.querySelector(".reset-filters-btn")
 const filterNoResultsContainer = document.querySelector(".filter-no-results")
 const resetFiltersInput = document.querySelector(".reset-filter-input")
+const expandMapBtn = document.querySelector(".map-button")
+const mapIframe = document.querySelector(".map-iframe")
 
 initPrivacyModal()
+initMap(expandMapBtn, mapIframe, "New York")
 renderFilterOptions(filters, filtersForm, createFilterOptions)
 renderEventCards(eventsStore, eventsListContainer, createEventCard)
 

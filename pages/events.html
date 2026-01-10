@@ -31,7 +31,7 @@
           </div>
           <div class="search__divider"></div>
           <div class="search__field search__field--location">
-            <input type="text" value="Mountain View, CA" placeholder="City" />
+            <input type="text" value="New York, NY" placeholder="City" />
           </div>
           <button class="search__submit" aria-label="Search">
             <img
@@ -98,16 +98,22 @@
         </div>
       </section>
       <aside class="events-map">
-        <h3>Find events near</h3>
-        <p>New York, NY</p>
+        <p>Find events near</p>
+        <h3>New York, NY</h3>
         <div class="map">
           <iframe
-            src="https://maps.google.com/maps?q=Paris%2C%20France&t=m&z=14&ie=UTF8&iwloc=&output=embed"
+            class="map-iframe"
+            src="/assets/images/map-blured.png"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
+          <button class="map-button">
+            Browse in map<img
+              src="/assets/icons/expandMapIcon.svg"
+              alt="Expand map icon"
+            />
+          </button>
         </div>
-        <button class="map-button">Browse in map</button>
       </aside>
     </main>
     <footer id="footer">
